@@ -1,0 +1,8 @@
+{
+  "name": "askbys-mobile",
+  "description": "jQuery Mobile app for Bainbridge Youth Services",
+  "version": "0.0.0",
+  "dependencies": {
+  },
+  "devDependencies": {}
+}
