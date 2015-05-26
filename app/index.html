@@ -1,37 +1,49 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<title>jQuery Mobile Bootstrap Theme</title>
-		<link rel="stylesheet" href="styles/jquery-mobile.css">
-  		<script data-main="scripts/main" src="scripts/libs/require.js"></script>
-	</head>
-	<body>
-		<div data-role="page" data-theme="a">
-			<div data-role="header" data-position="inline">
-				<h1>jQuery Mobile Bootstrap Theme</h1>
-				<div data-role="navbar">
-					<ul>
-						<li><a href="index.html" data-icon="home" class="ui-btn-active">Home</a></li>
-						<li><a href="buttons.html" data-icon="star">Buttons</a></li>
-						<li><a href="listviews.html" data-icon="grid">Lists</a></li>
-						<li><a href="nav.html" data-icon="search">Nav</a></li>
-						<li><a href="forms.html" data-icon="gear">Forms</a></li>
-					</ul>
-				</div>
-			</div>
-			<div data-role="content" data-theme="a">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Ask Bainbridge Youth Services</title>
+    <link rel="stylesheet" href="styles/jquery-mobile.css">
+    <link rel="stylesheet" href="styles/custom.css">
+    <script data-main="scripts/main" src="scripts/libs/require.js"></script>
+  </head>
+  <body>
+    <div data-role="page" data-theme="a">
+      <div data-role="header" data-position="inline">
+        <p>Ask Bainbridge Youth Services</p>
+      </div>
+      <div data-role="content" data-theme="a">
+        <form action="#">
+          <table width="100%">
+            <tr>
+              <td colspan="3" width="100%">
+                <input type="text" placeholder="Ask a question...">
+              </td>
+            </tr>
+            <tr>
+              <td width="33%">&nbsp;</td>
+              <td width="33%">
+                <input type="submit" value="Submit">
+              </td>
+              <td width="33%">&nbsp;</td>
+            </tr>
+          </table>
+        </form>
 
-				<a href="https://github.com/commadelimited/jQuery-Mobile-Bootstrap-Theme" data-role="button" data-icon="star">Get the code</a>
+        <hr>
 
-				<h2>Overview</h2>
-
-				<p>
-					The jQuery Mobile Bootstrap theme is meant to duplicate the appearance of <a href="http://getbootstrap.com/">Bootstrap</a> within the context of a jQuery Mobile application. Currently only the colors are mimicked, but eventually some of the components might also work their way into the theme.
-				</p>
-
-			</div>
-		</div>
-	</body>
+        <ul data-role="listview" data-inset="true">
+          <li><a href="#">Ask a doctor...</a></li>
+          <li></li>
+          <li><a href="#">Ask a counselor...</a></li>
+          <li></li>
+          <li><a href="#">Make an appointment...</a></li>
+        </ul>
+      </div>
+      <div data-role="footer">
+        <p>Footer?</p>
+      </div>
+    </div>
+  </body>
 </html>
