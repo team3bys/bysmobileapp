@@ -12,3 +12,7 @@ legend {
   font-size: 16pt;
 }
 
+label small {
+  color: slategray;
+}
+
