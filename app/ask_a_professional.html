@@ -16,12 +16,13 @@
       </div>
       <div data-role="content" data-theme="a">
         <form action="#">
-          <div data-role="fieldcontain">
-            <select id="person">
-              <option selected>Ask a Doctor</option>
-              <option>Ask a Counselor</option>
-            </select>
-          </div>
+          <fieldset id="profession-choice" data-role="controlgroup" data-type="horizontal">
+            <legend>Ask a...</legend>
+            <input type="radio" name="radio-choice-b" id="radio-choice-doctor" value="list" checked="checked">
+            <label for="radio-choice-doctor">Doctor</label>
+            <input type="radio" name="radio-choice-b" id="radio-choice-counselor" value="gallery">
+            <label for="radio-choice-counselor">Counselor</label>
+          </fieldset>
 
           <div data-role="fieldcontain">
             <label for="full_name">Full Name</label>
@@ -36,6 +37,10 @@
           <div data-role="fieldcontain">
             <label for="message_content">Message</label>
             <textarea id="message_content"></textarea>
+          </div>
+
+          <div data-role="fieldcontain">
+            <input type="submit" value="Submit" data-inline="true">
           </div>
         </form>
       </div>
