@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+  xmlns:gap = "http://phonegap.com/ns/1.0"
+  id = "com.askbys.mobileapp"
+  version = "0.0.1">
+
+  <name>AskBYS Mobile</name>
+
+  <description>
+    Ask Bainbridge Youth Services Mobile
+  </description>
+
+  <author href="http://askbys.com" email="askbys@askbys.com">
+    Bainbridge Youth Services
+  </author>
+
+  <access origin="*"/>
+</widget>
