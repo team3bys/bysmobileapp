@@ -16,6 +16,10 @@ label small {
   color: slategray;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .orange-button {
   display: block;
   background: orange;
