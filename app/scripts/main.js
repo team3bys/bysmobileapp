@@ -17,24 +17,33 @@ require(["jquery",
     $("#search").on("listviewbeforefilter", function (e, data) {
       var $ul = $(this),
       $input = $(data.input),
-      value = $input.val(),
+      input = $input.val(),
       html = "";
       $ul.html(html);
-      if (value && value.length > 2) {
+      if (input && input.length > 2) {
         $ul.html("<li><div class='ui-loader'><span class='ui-icon ui-icon-loading'></span></div></li>");
         $ul.listview("refresh");
         $.ajax({
-          url: "http://gd.geobytes.com/AutoCompleteCity",
-          dataType: "jsonp",
+          url: "http://askbys.com/feed",
+          dataType: "xml",
           crossDomain: true,
-          data: {
-            q: $input.val()
+        }).then(function (response) {
+
+          if (response) {
+
+            $("item", response).each(function (entry) {
+
+              alert($("category", entry).contents().filter(function() {
+                return this.nodeType == Node.TEXT_NODE;
+              }).each(function() {
+                $(this).text();
+              }));
+
+            });
+
+          } else {
+            html = "<h4>Sorry, we were unable to contact the server.</h4>";
           }
-        })
-        .then(function (response) {
-          $.each(response, function (i, val) {
-            html += "<li>" + val + "</li>";
-          });
           $ul.html(html);
           $ul.listview("refresh");
           $ul.trigger("updatelayout");
