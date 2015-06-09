@@ -15,7 +15,7 @@
         <p><a href="index.html">Ask Bainbridge Youth Services</a></p>
       </div>
       <div data-role="content" data-theme="a">
-        <form action="#">
+        <form action="https://askbys.com/ask-a-counselor">
           <fieldset id="profession-choice" data-role="controlgroup" data-type="horizontal">
             <legend>Ask a...</legend>
             <input type="radio" name="radio-choice-b" id="radio-choice-counselor" value="list" checked="checked">
@@ -25,17 +25,17 @@
           </fieldset>
 
           <div data-role="fieldcontain">
-            <label for="full_name">Full Name <small>(optional)</small></label>
-            <input type="text" id="full_name" />
+            <label for="your-name">Full Name <small>(optional)</small></label>
+            <input type="text" id="your-name" name="your-name" />
           </div>
 
           <fieldset id="gender-choice" data-role="controlgroup">
             <label>I am... <small>(required)</small></label>
-            <input type="radio" name="radio-choice-gender" id="radio-choice-male">
+            <input type="radio" name="Gender" value="Male" id="radio-choice-male">
             <label for="radio-choice-male">Male</label>
-            <input type="radio" name="radio-choice-gender" id="radio-choice-female">
+            <input type="radio" name="Gender" value="Female" id="radio-choice-female">
             <label for="radio-choice-female">Female</label>
-            <input type="radio" name="radio-choice-gender" id="radio-choice-unsaid">
+            <input type="radio" name="Gender" value="Prefer not to answer" id="radio-choice-unsaid">
             <label for="radio-choice-unsaid">(Prefer not to say)</label>
           </fieldset>
 
@@ -45,21 +45,21 @@
           </div>
 
           <div data-role="fieldcontain">
-            <label for="age">Age <small>(required)</small></label>
-            <input type="number" id="age" min="0" max="100" step="1">
+            <label for="text-447">Age <small>(required)</small></label>
+            <input type="number" name="text-447" id="text-447" min="0" max="100" step="1">
           </div>
 
           <fieldset id="state-choice" data-role="controlgroup">
             <label>I am a resident of... <small>(required)</small></label>
-            <input type="checkbox" name="checkbox-state" id="checkbox-washington">
+            <input type="checkbox" name="checkbox-199" value="WA state" id="checkbox-washington">
             <label for="checkbox-washington">Washington</label>
-            <input type="checkbox" name="checkbox-state" id="checkbox-other">
+            <input type="checkbox" name="checkbox-199" value="Another state" id="checkbox-other">
             <label for="checkbox-other">Another state</label>
           </fieldset>
 
           <div data-role="fieldcontain">
-            <label for="message_content">Message <small>(required)</small></label>
-            <textarea id="message_content"></textarea>
+            <label for="your-message">Message <small>(required)</small></label>
+            <textarea id="your-message"></textarea>
           </div>
 
           <table width="100%">
