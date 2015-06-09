@@ -25,17 +25,40 @@
           </fieldset>
 
           <div data-role="fieldcontain">
-            <label for="full_name">Full Name</label>
+            <label for="full_name">Full Name <small>(optional)</small></label>
             <input type="text" id="full_name" />
           </div>
 
+          <fieldset id="gender-choice" data-role="controlgroup">
+            <label>I am... <small>(required)</small></label>
+            <input type="radio" name="radio-choice-gender" id="radio-choice-male">
+            <label for="radio-choice-male">Male</label>
+            <input type="radio" name="radio-choice-gender" id="radio-choice-female">
+            <label for="radio-choice-female">Female</label>
+            <input type="radio" name="radio-choice-gender" id="radio-choice-unsaid">
+            <label for="radio-choice-unsaid">(Prefer not to say)</label>
+          </fieldset>
+
           <div data-role="fieldcontain">
-            <label for="email_address">Email Address</label>
+            <label for="email_address">Email Address <small>(required)</small></label>
             <input type="email" id="email_address" />
           </div>
 
           <div data-role="fieldcontain">
-            <label for="message_content">Message</label>
+            <label for="age">Age <small>(required)</small></label>
+            <input type="number" id="age" min="0" max="100" step="1">
+          </div>
+
+          <fieldset id="state-choice" data-role="controlgroup">
+            <label>I am a resident of... <small>(required)</small></label>
+            <input type="checkbox" name="checkbox-state" id="checkbox-washington">
+            <label for="checkbox-washington">Washington</label>
+            <input type="checkbox" name="checkbox-state" id="checkbox-other">
+            <label for="checkbox-other">Another state</label>
+          </fieldset>
+
+          <div data-role="fieldcontain">
+            <label for="message_content">Message <small>(required)</small></label>
             <textarea id="message_content"></textarea>
           </div>
 
