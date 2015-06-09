@@ -1,3 +1,10 @@
+div[data-role="content"] {
+  display: block;
+  width: 93%;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
 div p {
   text-align: center;
 }

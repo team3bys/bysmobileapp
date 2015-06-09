@@ -29,14 +29,14 @@
           <div class="ui-grid-a">
             <div class="ui-block-a">
               <div data-role="fieldcontain">
-                <label for="date">Appointment Date</label>
+                <label for="date">Appointment Date</label><br>
                 <input type="date" id="date" />
               </div>
             </div>
 
             <div class="ui-block-b">
               <div data-role="fieldcontain">
-                <label for="time">Appointment Time</label>
+                <label for="time">Appointment Time</label><br>
                 <input type="time" id="time" />
               </div>
             </div>
@@ -47,12 +47,22 @@
             <textarea id="message_content"></textarea>
           </div>
 
-          <div data-role="fieldcontain">
-            <input type="submit" value="Submit" data-inline="true">
-          </div>
-          <div data-role="fieldcontain">
-            <a href="index.html" data-role="button" class="ui-btn-right">Cancel</a>
-          </div>
+          <table width="100%">
+            <tr>
+              <td width="33%">
+                <div data-role="fieldcontain">
+                  <input type="submit" value="Submit" data-inline="true">
+                </div>
+              </td>
+              <td width="33%">
+              </td>
+              <td width="33%">
+                <div data-role="fieldcontain">
+                  <a href="index.html" data-role="button" class="ui-btn-right">Cancel</a>
+                </div>
+              </td>
+            </tr>
+          </table>
         </form>
       </div>
     </div>
