@@ -21,9 +21,10 @@ require(["jquery",
       crossDomain: true,
     });
     var parsedXml = $.parseXml(xmlResponse);
+    var xmlObject = $(parsedXml);
 
-    if (parsedXml) {
-      console.log(parsedXml);
+    if (xmlObject) {
+      console.log(xmlObject.text());
     }
 
     $("#search").on("listviewbeforefilter", function (e, data) {
