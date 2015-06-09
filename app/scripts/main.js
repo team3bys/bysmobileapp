@@ -14,6 +14,18 @@ require(["jquery",
   console.log('jQuery version ' + $().jquery + ' installed');
 
   $(document).on("pageinit", "#index", function() {
+
+    var xmlResponse = $.ajax({
+      url: "http://askbys.com/feed",
+      dataType: "xml",
+      crossDomain: true,
+    });
+    var parsedXml = $.parseXml(xmlResponse);
+
+    if (parsedXml) {
+      console.log(parsedXml);
+    }
+
     $("#search").on("listviewbeforefilter", function (e, data) {
       var $ul = $(this),
       $input = $(data.input),
