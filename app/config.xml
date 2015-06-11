@@ -2,7 +2,7 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
   xmlns:gap = "http://phonegap.com/ns/1.0"
   id = "org.bainbridgeyouthservices.askbys"
-  version = "0.0.2">
+  version = "0.0.3">
 
   <name>AskBYS</name>
 
@@ -16,33 +16,40 @@
 
   <access origin="*"/>
   
-  <platform name="ios">
-      <!-- iOS 8.0+ -->
-      <!-- iPhone 6 Plus  -->
-      <wicon src="www/icon-60@3x.png" width="180" height="180" />
-      <!-- iOS 7.0+ -->
-      <!-- iPhone / iPod Touch  -->
-      <icon src="www/icon-60.png" width="60" height="60" />
-      <icon src="www/icon-60@2x.png" width="120" height="120" />
-      <!-- iPad -->
-      <icon src="www/icon-76.png" width="76" height="76" />
-      <icon src="www/icon-76@2x.png" width="152" height="152" />
-      <!-- iOS 6.1 -->
-      <!-- Spotlight www/icon -->
-      <icon src="www/icon-40.png" width="40" height="40" />
-      <icon src="www/icon-40@2x.png" width="80" height="80" />
-      <!-- iPhone / iPod Touch -->
-      <icon src="www/icon.png" width="57" height="57" />
-      <icon src="www/icon@2x.png" width="114" height="114" />
-      <!-- iPad -->
-      <icon src="www/icon-72.png" width="72" height="72" />
-      <icon src="www/icon-72@2x.png" width="144" height="144" />
-      <!-- iPhone Spotlight and Settings www/icon -->
-      <icon src="www/icon-small.png" width="29" height="29" />
-      <icon src="www/icon-small@2x.png" width="58" height="58" />
-      <!-- iPad Spotlight and Settings www/icon -->
-      <icon src="www/icon-50.png" width="50" height="50" />
-      <icon src="www/icon-50@2x.png" width="100" height="100" />
-  </platform>
+  <icon src="icon.png" />
   
+  <!-- iPhone 6 / 6+ -->
+<icon src="icon-60@3x.png" gap:platform="ios" width="180" height="180" />
+
+<!-- iPhone / iPod Touch  -->
+<icon src="icon-60.png" gap:platform="ios" width="60" height="60" />
+<icon src="icon-60@2x.png" gap:platform="ios" width="120" height="120" />
+
+<!-- iPad -->
+<icon src="icon-76.png" gap:platform="ios" width="76" height="76" />
+<icon src="icon-76@2x.png" gap:platform="ios" width="152" height="152" />
+
+<!-- Settings Icon -->
+<icon src="icon-small.png" gap:platform="ios" width="29" height="29" />
+<icon src="icon-small@2x.png" gap:platform="ios" width="58" height="58" />
+
+<!-- Spotlight Icon -->
+<icon src="icon-40.png" gap:platform="ios" width="40" height="40" />
+<icon src="icon-40@2x.png" gap:platform="ios" width="80" height="80" />
+
+<!-- iPhone / iPod Touch -->
+<icon src="icon.png" gap:platform="ios" width="57" height="57" />
+<icon src="icon@2x.png" gap:platform="ios" width="114" height="114" />
+
+<!-- iPad -->
+<icon src="icon-72.png" gap:platform="ios" width="72" height="72" />
+<icon src="icon-72@2x.png" gap:platform="ios" width="144" height="144" />
+
+<!-- iPhone Spotlight and Settings Icon -->
+<icon src="icon-small.png" gap:platform="ios" width="29" height="29" />
+<icon src="icon-small@2x.png" gap:platform="ios" width="58" height="58" />
+
+<!-- iPad Spotlight and Settings Icon -->
+<icon src="icon-50.png" gap:platform="ios" width="50" height="50" />
+<icon src="icon-50@2x.png" gap:platform="ios" width="100" height="100" />  
 </widget>
