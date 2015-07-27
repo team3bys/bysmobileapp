@@ -16,16 +16,24 @@
       </div>
       <div data-role="content" data-theme="a">
         <div class="text-center">
-          <img src="images/logo.jpg" width="120" height="169" />
+          <img src="images/logo.png" width="152" height="152" />
         </div>
 
         <br>
-
-        <ul id="search" data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Ask a question..." data-filter-theme="d"></ul>
-
+        <form action="https://askbys.com/" method="get">
+          <input type="search" name="s" id="s" placeholder="Ask a question..." />
+          <table width="100%">
+            <tr>
+              <td width="33%">&nbsp;</td>
+              <td width="33%"><input type="submit" value="Search" /></td>
+              <td width="33%">&nbsp;</td>
+            </tr>
+          </table>
+        </form>
         <hr>
 
-        <a class="orange-button" href="ask_a_professional.html">Ask a professional...</a>
+        <a class="orange-button" href="ask_a_counselor.html">Ask a counselor...</a>
+        <a class="orange-button" href="ask_a_doctor.html">Ask a doctor...</a>
         <a class="orange-button" href="make_an_appointment.html">Make an appointment...</a>
       </div>
     </div>
