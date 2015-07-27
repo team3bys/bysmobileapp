@@ -51,5 +51,16 @@
 
 <!-- iPad Spotlight and Settings Icon -->
 <icon src="icon-50.png" gap:platform="ios" width="50" height="50" />
-<icon src="icon-50@2x.png" gap:platform="ios" width="100" height="100" />  
+<icon src="icon-50@2x.png" gap:platform="ios" width="100" height="100" />
+
+
+<!-- Kirk Add's -->
+<gap:plugin name="com.phonegap.plugin.statusbar" />
+
+<feature name="StatusBar">
+    <param name="ios-package" value="CDVStatusBar" onload="true" />
+</feature>
+
+<preference name="StatusBarOverlaysWebView" value="false" />
+
 </widget>
