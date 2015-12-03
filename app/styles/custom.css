@@ -1,7 +1,7 @@
 div[data-role="content"] {
   display: block;
   width: 93%;
-  max-width: 450px;
+  max-width: 480px;
   margin: 0 auto;
 }
 
@@ -23,15 +23,17 @@ label small {
   color: slategray;
 }
 
+
+
 .text-center {
   text-align: center;
 }
 
 .orange-button {
   display: block;
-  background: orange;
+  background: #00AC90;
   box-shadow: 0 1px 2px #AAA;
-  color: #333 !important; /* This is getting overridden by a stylesheet loaded before this one. TODO? */
+  color: #333 !important; /* This is getting overridden by a stylesheet loaded before this one. TODO? #333 */
   text-shadow: none;
   margin: 10px 0;
   padding: 20px;
