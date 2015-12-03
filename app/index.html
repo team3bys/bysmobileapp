@@ -1,38 +1,52 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Bainbridge Youth Services</title>
-    <link rel="stylesheet" href="styles/bys-app-theme.css">
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile.structure-1.3.2.min.css" />
-    <link rel="stylesheet" href="styles/custom.css">
-    <script data-main="scripts/main" src="scripts/libs/require.js"></script>
-  </head>
-  <body id="index">
-    <div data-role="page" data-theme="a">
-     <div data-role="content" data-theme="a">
-        <div class="text-center">
-          <img src="images/logo.png" width="152" height="152" />
+    <head>
+        <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width,initial-scale=1">
+                <title>Bainbridge Youth Services</title>
+                <link rel="stylesheet" href="styles/bys-app-theme.css">
+                    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile.structure-1.3.2.min.css" />
+                    <link rel="stylesheet" href="styles/custom.css">
+                        <script data-main="scripts/main" src="scripts/libs/require.js"></script>
+                        </head>
+    <body id="index">
+        <div data-role="page" data-theme="a">
+            <div data-role="content" data-theme="a">
+                <div class="text-center">
+                    <img src="images/logo.png" width="152" height="152" />
+                </div>
+                
+                <br>
+                <form action="http://www.askbys.com/askbysmobile/testjson.php">
+                    <select name="query">
+                        <option value="depression">Depression</option>
+                        <option value="suicide">Suicide</option>
+                        <option value="abuse">Abuse</option>
+                        <option value="bullying">Bullying</option>
+                    </select>
+                    <input type="submit" value="search">
+                </form>
+                <hr>
+                <button id="orange-button" onclick="goGetWordPressForm('http://askbys.com/appointment/')">Make an appointment...</button>
+                <button id="orange-button" onclick="goGetWordPressForm('http://askbys.com/ask-a-counselor/')">Ask a counselor...</button>
+                <button id="orange-button" onclick="goGetWordPressForm('http://askbys.com/ask-a-doctor2')">Ask a doctor...</button>
+                </div>
         </div>
-
-        <br>
-        <form action="search.html" method="get">
-          <input type="search" name="search" id="search" placeholder="Ask a question..." />
-          <table width="100%">
-            <tr>
-              <td width="33%">&nbsp;</td>
-              <td width="33%"><input type="submit" value="search" /></td>
-              <td width="33%">&nbsp;</td>
-            </tr>
-          </table>
-        </form>
-        <hr>
-
-        <a class="orange-button" href="ask_a_counselor.html">Ask a counselor...</a>
-        <a class="orange-button" href="ask_a_doctor.html">Ask a doctor...</a>
-        <a class="orange-button" href="make_an_appt.html">Make an appointment...</a>
-      </div>
-    </div>
-  </body>
+    </body>
 </html>
+
+<script>
+
+// open win and turn off location
+function goGetWordPressForm(WPUrl) {
+var ref = cordova.InAppBrowser.open WPUrl, '_blank', 'location=no');
+
+// attach listener to loadstart
+ref.addEventListener('loadstart', function(event) {
+var urlSuccessPage = "http://myloginapp/success/";
+if (event.url == urlSuccessPage) {
+ref.close();
+}
+});
+};
+</script>

@@ -56,6 +56,7 @@
 
 <!-- Kirk Add's -->
 <gap:plugin name="com.phonegap.plugin.statusbar" />
+<gap:plugin name="cordova-plugin-inappbrowser" source="npm"/>
 
 <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true" />
