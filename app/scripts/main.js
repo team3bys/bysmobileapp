@@ -1,10 +1,10 @@
 require.config({
 	paths: {
-		jquery: 'libs/jquery',
-		jqueryMobile: 'libs/jquery.mobile-1.3.2'
+		jquery: 'libs/jquery-2.1.4',
+		jqueryMobile: 'libs/jquery.mobile-1.4.5'
 	},
   shim: {
-	"libs/jquery.mobile-1.3.2'" : { deps: ["jquery"], exports: 'jquery' },
+	"libs/jquery.mobile-1.4.5'" : { deps: ["jquery"], exports: 'jquery' },
   }
 });
 
@@ -44,6 +44,4 @@ function url_query( query ) {
         return false;
     }
 }
-                            
-                            
 
