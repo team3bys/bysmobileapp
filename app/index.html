@@ -41,15 +41,15 @@
 
 // open win and turn off location
 function goGetWordPressForm(WPUrl) {
-var ref = window.open(WPUrl, '_blank', 'location=no', 'toolbar=yes', 'presentationstyle=formsheet','transitionstyle=crossdissolve', 'hidden=yes');
-
+var ref = window.open(WPUrl, '_blank', 'location=yes', 'toolbar=yes', 'presentationstyle=formsheet','transitionstyle=crossdissolve');
+};
 
 // attach listener to loadstart
-ref.addEventListener('loadstart', function(event) {
-var urlSuccessPage = "http://myloginapp/success/";
-if (event.url == urlSuccessPage) {
-ref.close();
-}
-});
-};
+//ref.addEventListener('loadstart', function(event) {
+//var urlSuccessPage = "http://myloginapp/success/";
+//if (event.url == urlSuccessPage) {
+//ref.close();
+//}
+//});
+
 </script>
