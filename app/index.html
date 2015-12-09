@@ -42,14 +42,12 @@
 
 // open win and turn off location
 function goGetWordPressForm(WPUrl) {
-    document.addEventListener("deviceready", onDeviceReady, false);
     var ref = window.open(WPUrl, '_blank', 'location=yes', 'toolbar=yes', 'presentationstyle=formsheet','transitionstyle=crossdissolve');
 };
 
 
 // open win and turn off location
 function goGetWordPressFormTest(WPUrl) {
-    document.addEventListener("deviceready", onDeviceReady, false);
     var ref = cordova.InAppBrowser.open(WPUrl, '_blank', 'location=yes', 'toolbar=yes', 'presentationstyle=formsheet','transitionstyle=crossdissolve');
 };
 
