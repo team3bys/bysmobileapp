@@ -88,10 +88,10 @@
 <gap:plugin name="org.apache.cordova.network-information" />
 <gap:plugin name="org.apache.cordova.splashscreen" />
 <gap:plugin name="org.apache.cordova.vibration" />
- <gap:plugin name="org.apache.cordova.inappbrowser" />
+ 
 -->
 <gap:plugin name="com.phonegap.plugin.statusbar" />
-
+<gap:plugin name="org.apache.cordova.inappbrowser" />
 
 <!-- Third party plugins -->
 <feature name="StatusBar">
