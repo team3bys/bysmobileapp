@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width,initial-scale=1">
+                <title>Bainbridge Youth Services</title>
+                        <link rel="stylesheet" href="styles/BYSMobile.min.css" />
+                        <link rel="stylesheet" href="styles/jquery.mobile.icons.min.css" />
+                        <link rel="stylesheet" href="styles/custom.css" />
+                        <link rel="stylesheet" href="styles/jquery.mobile.structure-1.4.5.min.css" />
+                        <script src="scripts/libs/jquery-1.11.1.min.js"></script>
+                        <script src="scripts/libs/jquery.mobile-1.4.5.min.js"></script>
+                        <script src="cordova.js"></script>
+    </head>
+        <body id="index">
+                
+
+            <div data-role="page" data-theme="a" data-role="main" class="ui-content"  >
+                <div data-role="header">
+                    <a href="#myPanel" data-role="button" data-icon="bars" data-iconpos="notext" data-theme="b" data-inline="true" class="ui-link ui-btn ui-btn-b ui-icon-bars ui-btn-icon-notext ui-btn-inline ui-shadow ui-corner-all ui-first-child" role="button"> </a>
+                </div><!-- /header -->
+
+                <div data-role="content" data-theme="a">
+                    <div class="text-center">
+                        <img src="images/logo.png" width="152" height="152" />
+                    </div>
+                    
+                    <br>
+                    <h2>About BYS</h2>
+
+                </div>
+
+                <!--Panel-->
+                  <div data-role="panel" id="myPanel"> 
+                    <h2>BYS</h2>
+                    <a href="index.html">Home</a> <br>
+                    <a href="about.html">About BYS</a> <br>
+                  </div>
+
+            </div>
+
+        </body>
+    </html>
+
+<script>
+
+// open win and turn off location
+function goGetWordPressForm(WPUrl) {
+    var ref = window.open(WPUrl, '_blank', 'location=yes,toolbar=yes,presentationstyle=formsheet,transitionstyle=crossdissolve');
+};
+
+
+// open win and turn off location
+function goGetWordPressFormInjectCSS(WPUrl) {
+    var ref = window.open(WPUrl, '_blank', 'location=yes,toolbar=yes,presentationstyle=formsheet,transitionstyle=crossdissolve');
+    ref.addEventListener('loadstop', function() {
+    ref.insertCSS({file: "styles/wp-contact7.css"});
+                         });
+};
+
+
+// attach listener to loadstart
+//ref.addEventListener('loadstart', function(event) {
+//var urlSuccessPage = "http://myloginapp/success/";
+//if (event.url == urlSuccessPage) {
+//ref.close();
+//}
+//});
+
+</script>
