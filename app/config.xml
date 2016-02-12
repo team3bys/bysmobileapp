@@ -101,11 +101,10 @@
 <gap:plugin name="org.apache.cordova.inappbrowser" />
 
 <!-- Third party plugins -->
-<!--
+
 <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true" />
 </feature>
 
 <preference name="StatusBarOverlaysWebView" value="false" />
--->
 </widget>
