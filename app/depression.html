@@ -16,26 +16,60 @@
                 
 
             <div data-role="page" data-theme="a" data-role="main" class="ui-content"  >
-                <div data-role="header">
-                    <a href="#myPanel" data-role="button" data-icon="bars" data-iconpos="notext" data-theme="b" data-inline="true" class="ui-link ui-btn ui-btn-b ui-icon-bars ui-btn-icon-notext ui-btn-inline ui-shadow ui-corner-all ui-first-child" role="button"> </a>
-                </div><!-- /header -->
+                
 
                 <div data-role="content" data-theme="a">
+                    <a href="index.html"><img src="images/home.png" width="25" height="25" ></a>
                     <div class="text-center">
                         <img src="images/logo.png" width="152" height="152" />
                     </div>
                     
                     <br>
                     <h2>Depression</h2>
+                    <p id="demo"></p>
+
+                    <script type="text/javascript">
+
+                    var loadJSONP = function ( url, callback ) {
+
+                        // Create script with url and callback (if specified)
+                        var ref = window.document.getElementsByTagName( 'script' )[ 0 ];
+                        var script = window.document.createElement( 'script' );
+                        script.src = url + (url.indexOf( '?' ) + 1 ? '&' : '?') + 'callback=' + callback;
+
+                        // Insert script tag into the DOM (append to <head>)
+                        ref.parentNode.insertBefore( script, ref );
+
+                        // After the script is loaded (and executed), remove it
+                        script.onload = function () {
+                            this.remove();
+                        };
+
+                    };
+
+                    var mycallback = function ( data ) {
+                        console.log( data );
+                        //var obj = JSON.parse(data);
+                        var jsonStr = JSON.stringify(data);
+                        //document.getElementById("demo").innerHTML = jsonStr;
+
+                        var obj = JSON.parse(jsonStr);
+                        var appendage = document.createElement('appendage');
+
+                        for (i = 0; i < obj.length; i++) {
+                            appendage.innerHTML +=  "<b>Title: </b><br>" + obj[i].title + "<br><br>" +  "<b>Question: </b><br>" + obj[i].post_content + "<br><br>" + "<b>BYS Counselor Response: </b><br>" + obj[i].comment_content + "<hr>";
+                            demo.appendChild(appendage);
+                        }
+
+                        
+                    }
+                     
+                     loadJSONP( 'http://www.askbys.com/askbysmobile/testjsonp.php?search=depression', 'mycallback' ); //use jsonp callback facility to output json from our jsonp test page
+                      </script>
 
                 </div>
 
-                <!--Panel-->
-                  <div data-role="panel" id="myPanel"> 
-                    <h2>BYS</h2>
-                    <a href="index.html">Home</a> <br>
-                    <a href="about.html">About BYS</a> <br>
-                  </div>
+                
 
             </div>
 
