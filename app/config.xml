@@ -14,7 +14,7 @@
     Bainbridge Youth Services
   </author>
 
-  <access origin="*"/>
+  <access origin="www.askbys.com"/>
   <!--
    Define access to external domains.
    <access />            - a blank access tag denies access to all external resources.
