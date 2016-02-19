@@ -14,7 +14,10 @@
     Bainbridge Youth Services
   </author>
 
-  <access origin="www.askbys.com"/>
+  <gap:plugin name="com.indigoway.cordova.whitelist.whitelistplugin" version="1.1.1" />
+  <access origin="​*" />
+  <allow-navigation href="*​" />
+  <allow-intent href="*" />
   <!--
    Define access to external domains.
    <access />            - a blank access tag denies access to all external resources.
@@ -25,9 +28,9 @@
    <access origin="http://phonegap.com" browserOnly="true" /> - only allows http://phonegap.com to be opened by the child browser.
    -->
 
-  
+
 <icon src="images/icon.png" />
-  
+
   <!-- iPhone 6 / 6+ -->
 <icon src="images/icon-60@3x.png" gap:platform="ios" width="180" height="180" />
 
@@ -95,7 +98,7 @@
 <gap:plugin name="org.apache.cordova.network-information" />
 <gap:plugin name="org.apache.cordova.splashscreen" />
 <gap:plugin name="org.apache.cordova.vibration" />
- 
+
 -->
 <gap:plugin name="com.phonegap.plugin.statusbar" />
 <gap:plugin name="org.apache.cordova.inappbrowser" />
