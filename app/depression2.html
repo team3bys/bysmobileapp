@@ -27,22 +27,45 @@
                     <br>
                     <h2>Depression</h2>
                     <p id="demo"></p>
-                    <script>
-                    $.getJSON('http://www.askbys.com/askbysmobile/testjsonp.php?search=depression', function(data) {
-                        $.each(data, function(i,item){
-                                $('body').append('' + item.title + '');
-                                $('body').append('
-                    Published:' + item.pubDate + '');
-                                $('body').append('
 
-                    ' + item.description + '
+                    <script type="text/javascript">
+
+                    var loadJSONP = function ( url, callback ) {
+
+                        // Create script with url and callback (if specified)
+                        var ref = window.document.getElementsByTagName( 'script' )[ 0 ];
+                        var script = window.document.createElement( 'script' );
+                        script.src = url + (url.indexOf( '?' ) + 1 ? '&' : '?') + 'callback=' + callback;
+
+                        // Insert script tag into the DOM (append to <head>)
+                        ref.parentNode.insertBefore( script, ref );
+
+                        // After the script is loaded (and executed), remove it
+                        script.onload = function () {
+                            this.remove();
+                        };
+
+                    };
+
+                    var mycallback = function ( data ) {
+                        console.log( data );
+                        //var obj = JSON.parse(data);
+                        var jsonStr = JSON.stringify(data);
+                        //document.getElementById("demo").innerHTML = jsonStr;
+
+                        var obj = JSON.parse(jsonStr);
+                        var appendage = document.createElement('appendage');
+
+                        for (i = 0; i < obj.length; i++) {
+                            appendage.innerHTML +=  "<b>Title: </b><br>" + obj[i].title + "<br><br>" +  "<b>Question: </b><br>" + obj[i].post_content + "<br><br>" + "<b>BYS Counselor Response: </b><br>" + obj[i].comment_content + "<hr>";
+                            demo.appendChild(appendage);
+                        }
 
 
-                    ');
+                    }
 
-                        });
-                    });
-                    </script>
+                     loadJSONP( 'http://www.askbys.com/askbysmobile/testjsonp.php?search=depression', 'mycallback' ); //use jsonp callback facility to output json from our jsonp test page
+                      </script>
 
                 </div>
 
