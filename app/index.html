@@ -14,12 +14,8 @@
                         <script src="cordova.js"></script>
     </head>
         <body id="index">
-
-
-            <div data-role="page" data-theme="a" data-role="main" class="ui-content"  >
-
-
-                <div data-role="content" data-theme="a">
+          <div data-role="page" data-theme="a" data-role="main"   >
+              <div data-role="main" data-theme="a" class="ui-content">
                     <a href="#myPanel" > <img src="images/question.png" width="25" height="25"> </a>
 
                     <div class="text-center">
@@ -55,10 +51,6 @@
                         </div>
                     </form>
 
-
-
-
-
                     <hr>
                     <button id="button" onclick="goGetWordPressForm('http://askbys.com/appointment-mobile/')">Make an appointment...</button>
                     <button id="button" onclick="goGetWordPressForm('http://askbys.com/ask-a-counseler-mobile/')">Ask a counselor...</button>
@@ -89,17 +81,16 @@
                     -->
 
                 </div>
+                <!--Panel-->
+                  <div data-role="panel" id="myPanel">
+                    <h2>Ask BYS</h2>
+                    <p> Put About Text Here</p>
+                    <br>
+                    <br>
+                    <p>Ask BYS is a service of Bainbridge Youth Services</p>
+                  </div>
             </div>
 
-            <!--Panel-->
-              <div data-role="panel" id="myPanel">
-                <h2>Ask BYS</h2>
-                <p> Put About Text Here</p>
-                <br>
-                <br>
-                <p>Ask BYS is a service of Bainbridge Youth Services</p>
-              </div>
-              
         </body>
     </html>
 <!--
