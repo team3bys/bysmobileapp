@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html>
     <head>
@@ -15,14 +16,8 @@
         <body id="index">
 
 
-
             <div data-role="page" data-theme="a" data-role="main" class="ui-content"  >
 
-
-
-
-          <div data-role="page" data-theme="a">
-              <div data-role="main" data-theme="a" class="ui-content">
 
                 <div data-role="content" data-theme="a">
                     <a href="index.html"><img src="images/home.png" width="25" height="25" ></a>
@@ -33,19 +28,25 @@
                     <br>
                     <h2>Depression</h2>
                     <p id="demo"></p>
-                    <script>
-                    $.getJSON('http://www.askbys.com/askbysmobile/testjsonp.php?search=depression', function(data) {
-                        $.each(data, function(i,item){
-                                $('body').append('' + item.title + '');
-                                $('body').append('
-                    Published:' + item.pubDate + '');
-                                $('body').append('
 
-                    ' + item.description + '
+                    <script type="text/javascript">
 
+                    var loadJSONP = function ( url, callback ) {
 
-                    ');
+                        // Create script with url and callback (if specified)
+                        var ref = window.document.getElementsByTagName( 'script' )[ 0 ];
+                        var script = window.document.createElement( 'script' );
+                        script.src = url + (url.indexOf( '?' ) + 1 ? '&' : '?') + 'callback=' + callback;
 
+                        // Insert script tag into the DOM (append to <head>)
+                        ref.parentNode.insertBefore( script, ref );
+
+                        // After the script is loaded (and executed), remove it
+                        script.onload = function () {
+                            this.remove();
+                        };
+
+                    };
 
                     var mycallback = function ( data ) {
                         console.log( data );
@@ -66,10 +67,6 @@
 
                      loadJSONP( 'https://www.askbys.com/askbysmobile/testjsonp.php?search=depression', 'mycallback' ); //use jsonp callback facility to output json from our jsonp test page
                       </script>
-
-                        });
-                    });
-                    </script>
 
                 </div>
 
