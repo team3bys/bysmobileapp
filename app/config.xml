@@ -14,7 +14,7 @@
     Bainbridge Youth Services
   </author>
 
-  
+
   <access origin="​*" />
 
   <!--
@@ -29,10 +29,7 @@
    <feature name="http://api.phonegap.com/1.0/network" />
    <feature name="http://api.phonegap.com/1.0/file" />
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/advancedui
 <icon src="images/icon.png" />
 
   <!-- iPhone 6 / 6+ -->
