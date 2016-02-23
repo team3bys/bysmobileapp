@@ -14,9 +14,9 @@
     Bainbridge Youth Services
   </author>
 
-  <gap:plugin name="com.indigoway.cordova.whitelist.whitelistplugin" version="1.1.1" />
-  <access origin="​*" />
   
+  <access origin="​*" />
+
   <!--
    Define access to external domains.
    <access />            - a blank access tag denies access to all external resources.
