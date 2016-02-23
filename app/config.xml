@@ -16,8 +16,7 @@
 
   <gap:plugin name="com.indigoway.cordova.whitelist.whitelistplugin" version="1.1.1" />
   <access origin="​*" />
-  <allow-navigation href="*​" />
-  <allow-intent href="*" />
+  
   <!--
    Define access to external domains.
    <access />            - a blank access tag denies access to all external resources.
