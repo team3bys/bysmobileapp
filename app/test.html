@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>READ JSON Example (getJSON)</title>
+ <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+ <script type="text/javascript">
+ $(document).ready(function() {
+ $.getJSON("http://phonegappro.esy.es/test/json.php",function(result){
+ $.each(result, function(i, field){
+ $("#output").append("Title: "+ field.title + " duration: "+field.duration +" Price:"+field.price+"<br/>");
+ });
+ });
+ });
+ </script>
+</head>
+<body>
+ <div id="output"></div>
+</body>
+</html>
