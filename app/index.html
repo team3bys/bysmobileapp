@@ -113,13 +113,15 @@ function goGetWordPressForm(WPUrl) {
 };
 
 
+
 // open win and turn off location
-function goGetWordPressFormInjectCSS(WPUrl) {
-    var ref = window.open(WPUrl, '_blank', 'location=yes,toolbar=yes,presentationstyle=formsheet,transitionstyle=crossdissolve');
-    ref.addEventListener('loadstop', function() {
-    ref.insertCSS({file: "styles/wp-contact7.css"});
-                         });
-};
+
+//function goGetWordPressFormInjectCSS(WPUrl) {
+//    var ref = window.open(WPUrl, '_blank', 'location=yes,toolbar=yes,presentationstyle=formsheet,transitionstyle=crossdissolve');
+//    ref.addEventListener('loadstop', function() {
+//    ref.insertCSS({file: "styles/wp-contact7.css"});
+//                         });
+//};
 
 
 // attach listener to loadstart
