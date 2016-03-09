@@ -14,22 +14,6 @@
     Bainbridge Youth Services
   </author>
 
-
-  <access origin="​*" />
-
-  <!--
-   Define access to external domains.
-   <access />            - a blank access tag denies access to all external resources.
-   <access origin="*" /> - a wildcard access tag allows access to all external resource.
-   Otherwise, you can specify specific domains:
-   <access origin="http://phonegap.com" />                    - allow any secure requests to http://phonegap.com/
-   <access origin="http://phonegap.com" subdomains="true" />  - same as above, but including subdomains, such as http://build.phonegap.com/
-   <access origin="http://phonegap.com" browserOnly="true" /> - only allows http://phonegap.com to be opened by the child browser.
-   -->
-   <feature name="http://api.phonegap.com/1.0/network" />
-   <feature name="http://api.phonegap.com/1.0/file" />
-
-
 <icon src="images/icon.png" />
 
   <!-- iPhone 6 / 6+ -->
@@ -103,6 +87,8 @@
 -->
 <gap:plugin name="com.phonegap.plugin.statusbar" />
 <gap:plugin name="org.apache.cordova.inappbrowser" />
+<gap:plugin name="cordova-plugin-whitelist" source=npm />
+<gap:plugin name="cordova-pluging-disable-nsapptransportsecurity" source=npm />
 
 <!-- Third party plugins -->
 
@@ -111,4 +97,17 @@
 </feature>
 
 <preference name="StatusBarOverlaysWebView" value="false" />
+
+<!-- from here: https://github.com/jessemonroy650/top-phonegap-mistakes/blob/master/the-whitelist-system.md
+ -->
+
+<allow-navigation href="*" />
+<allow-intent href="*" />
+<access origin="*" /> <!-- Required for iOS9 -->
+
+<!-- what are these? -->
+<feature name="http://api.phonegap.com/1.0/network" />
+<feature name="http://api.phonegap.com/1.0/file" />
+
+
 </widget>
