@@ -87,8 +87,8 @@
 -->
 <gap:plugin name="com.phonegap.plugin.statusbar" />
 <gap:plugin name="org.apache.cordova.inappbrowser" />
-<gap:plugin name=cordova-plugin-whitelist source=npm />
-<gap:plugin name=cordova-pluging-disable-nsapptransportsecurity source=npm />
+<gap:plugin name="cordova-plugin-whitelist" />
+<gap:plugin name="cordova-pluging-disable-nsapptransportsecurity" />
 
 <!-- Third party plugins -->
 
