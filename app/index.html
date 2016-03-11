@@ -13,11 +13,6 @@
                         <script src="scripts/libs/jquery.mobile-1.4.5.min.js"></script>
                         <script src="cordova.js"></script>
     </head>
-    <meta http-equiv="Content-Security-Policy"
-        content="default-src *;
-        style-src * 'self' 'unsafe-inline' 'unsafe-eval';
-        script-src * 'self' 'unsafe-inline' 'unsafe-eval';">
-        
         <body id="index">
 
 
@@ -32,23 +27,6 @@
                     </div>
 
                     <br>
-                    <!--
-                    <form name="WPSearch" id="form" action="http://www.askbys.com/askbysmobile/testjson.php">
-                        <select name="query">
-                            <option value="depression">Depression</option>
-                           <option value="suicide">Suicide</option>
-                            <option value="abuse">Abuse</option>
-                            <option value="bullying">Bullying</option>
-                       </select>
-                       <input type="submit" value="search">
-                  </form>
-                     -->
-
-
-                    <!--
-                    <button id="button" onclick="goGetWordPressForm('http://www.askbys.com/askbysmobile/testjson.php?search=depression')">Search Depression...</button>
-                    <button id="button" onclick="goGetWordPressForm('http://www.askbys.com/askbysmobile/testjson.php?search=suicide')">Search Suicide...</button>
-                    -->
                     <form>
                         <div class="ui-field-contain">
                             <label for="select-native-2">Search Topics:</label>
@@ -56,8 +34,6 @@
                                 <option value="">Search:</option>
                                 <option value="suicide.html">Suicide</option>
                                 <option value="depression.html">Depression</option>
-                                <option value="test.html">Test</option>
-                                <option value="http://www.askbys.com/askbysmobile/testjson.php?search=depression">Test JSON</option>
                             </select>
                         </div>
                     </form>
@@ -70,10 +46,6 @@
                     <button id="button" onclick="goGetWordPressForm('http://askbys.com/appointment-mobile/')">Make an appointment...</button>
                     <button id="button" onclick="goGetWordPressForm('http://askbys.com/ask-a-counseler-mobile/')">Ask a counselor...</button>
                     <button id="button" onclick="goGetWordPressForm('http://askbys.com/ask-a-doctor-mobile/')">Ask a doctor...</button>
-
-                    <!--<button id="button" onclick="goGetWordPressFormInjectCSS('http://askbys.com/askbysmobile/testmailer.php')">Ask a doctor, but via raw php...</button>
-                    </div>-->
-
 
                     <!--Facebook
                         <div id="fb-root"></div>
