@@ -1,10 +1,10 @@
 @@font-face {
-  font-family: 'Google Font';
-  src:url('font/GoogleFont.woff2') format('woff2');
+  font-family: 'Cabin';
+  src:url('font/Cabin-Regular.ttf') format('ttf');
   font-style: normal;
 }
 body {
-  font-family: 'Google Font';
+  font-family: 'Cabin';
 }
 
 div[data-role="content"] {
