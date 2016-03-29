@@ -1,9 +1,9 @@
 @@font-face {
   font-family: 'Cabin', sans-serif;
-  src:url('font/Cabin-Regular.ttf') format('ttf');
+  src:url('../font/Cabin-Regular.ttf') format('ttf');
 }
 body {
-  font-family: 'Cabin';
+  ffont-family: 'Cabin', sans-serif;
 }
 
 a {
