@@ -1,10 +1,14 @@
 @@font-face {
-  font-family: 'Cabin';
+  font-family: 'Cabin', sans-serif;
   src:url('font/Cabin-Regular.ttf') format('ttf');
-  font-style: normal;
 }
 body {
   font-family: 'Cabin';
+}
+
+a {
+    text-decoration: none;
+    outline: none;
 }
 
 div[data-role="content"] {
