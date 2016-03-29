@@ -2,8 +2,13 @@
   font-family: 'Cabin', sans-serif;
   src:url('../font/Cabin-Regular.ttf') format('ttf');
 }
-body {
-  ffont-family: 'Cabin', sans-serif;
+
+.ui-body-c, .ui-body-c input, .ui-body-c select, .ui-body-c textarea, .ui-body-c button {
+    font-family: 'Cabin', sans-serif;
+}
+
+body .ui-body-c{
+  font-family: 'Cabin', sans-serif;
 }
 
 a {
