@@ -1,14 +1,15 @@
-@@font-face {
-  font-family: 'Cabin', sans-serif;
-  src:url('../font/Cabin-Regular.ttf') format('ttf');
+@font-face {
+ font-family: 'cabin', sans-serif;
+ src:url('../font/Cabin-Regular.ttf') format('ttf');
 }
 
-.ui-body-c, .ui-body-c input, .ui-body-c select, .ui-body-c textarea, .ui-body-c button {
-    font-family: 'Cabin', sans-serif;
-}
 
-body .ui-body-c{
-  font-family: 'Cabin', sans-serif;
+  body {
+   font-family: 'cabin', sans-serif;
+  }
+
+.ui-btn{
+  font-family: 'cabin', sans-serif;
 }
 
 a {
