@@ -2,7 +2,7 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
   xmlns:gap = "http://phonegap.com/ns/1.0"
   id = "org.bainbridgeyouthservices.askbys"
-  version = "0.0.27">
+  version = "0.0.9">
 
   <name>askBYS</name>
 
@@ -106,6 +106,12 @@
 <allow-navigation href="*" />
 <allow-intent href="*" />
 <access origin="*" /> <!-- Required for iOS9 -->
+
+<!-- Kirk Add's for no iOS encryption -->
+<gap:config-file platform="ios" parent="ITSAppUsesNonExemptEncryption" mode="add">
+    <false/>
+</gap:config-file>
+
 
 <!-- what are these? -->
 <feature name="http://api.phonegap.com/1.0/network" />

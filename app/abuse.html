@@ -48,10 +48,11 @@
                     var mycallback = function ( data ) {
                         console.log( data );
                         //var obj = JSON.parse(data);
-                        var jsonStr = JSON.stringify(data);
+                        //var jsonStr = JSON.stringify(data);
                         //document.getElementById("demo").innerHTML = jsonStr;
 
-                        var obj = JSON.parse(jsonStr);
+                        //var obj = JSON.parse(jsonStr);
+                        var obj = data;
                         var appendage = document.createElement('appendage');
 
                         for (i = 0; i < obj.length; i++) {
