@@ -64,7 +64,7 @@
 <icon src="xxhdpi.png" platform="android" qualifier="xxhdpi" />
 <icon src="xxxhdpi.png" platform="android" qualifier="xxxhdpi" />
 
-<!-- Kirk Add's and update -->
+<!-- Kirk Add's and update 1 -->
 <!-- Core plugins -->
 <!--
 <gap:plugin name="org.apache.cordova.battery-status" />
