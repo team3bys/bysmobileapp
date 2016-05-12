@@ -1,0 +1,50 @@
+<html>
+<body>
+<h2>Ask BYS</h2>
+<p id="demo"></p>
+<script type="text/javascript">
+/*
+this is clean json if we need to test
+
+var text = '{"id":"814","title":"Can Depression Cause Strange Feelings?","commentauthor":"BYS Counselor","comment_content":"Thanks for your question. Depression can affect many things about a person. For many people, when they feel down or sad, they also find it hard to think positively. So, if someone is feeling depressed, it is possible that they think differently about people they are close to, or about their own future. But its not always true, so I cant say for sure either way about your situation. When someone is depressed, other things other than feelings and thoughts might be affected too for example, someone with depression may have a tough time sleeping, struggle with changes in how much they eat, or feel restless or tired all the time. There are many ways depression can affect the person, so its important to consult with someone trained in understanding depression. If you think you are struggling with depression, please consider talking to a professional therapist, counselor, doctor about whats going on. If you think someone you are close to is going through depression, it may help to let them know you are noticing these changes in thinking, and ask whether you can help them find a way to connect with a professional.You can go to our website askBYS.org and look for information under the Useful Info tab. One site that has some useful information about depression is"}';*/
+
+var loadJSONP = function ( url, callback ) {
+
+    // Create script with url and callback (if specified)
+    var ref = window.document.getElementsByTagName( 'script' )[ 0 ];
+    var script = window.document.createElement( 'script' );
+    script.src = url + (url.indexOf( '?' ) + 1 ? '&' : '?') + 'callback=' + callback;
+
+    // Insert script tag into the DOM (append to <head>)
+    ref.parentNode.insertBefore( script, ref );
+
+    // After the script is loaded (and executed), remove it
+    script.onload = function () {
+        this.remove();
+    };
+
+};
+
+var mycallback = function ( data ) {
+	
+	function jsonEscape(str)  {
+        return str.replace(/\n/g, "\\\\n").replace(/\r/g, "\\\\r").replace(/\t/g, "\\\\t");
+     }
+
+    console.log( data );
+    //var obj = JSON.parse(data);
+    var jsonStr = JSON.stringify(data);
+    document.getElementById("demo").innerHTML = jsonStr;
+    //var obj = JSON.parse(data);
+    var obj = data;
+    var appendage = document.createElement('appendage');
+    appendage.innerHTML = "<br>" + "<br>" + "ID:" + obj[0].id + "<br>" + "Title: " + obj[0].title + "<br>" +  "Question: " + obj[0].post_content + "<br>" + "BYS Counselor Response: " + obj[0].comment_content + "<br>" + "<br>" + "ID:" + obj[1].id + "<br>" + "Title: " + obj[1].title + "<br>" +  "Question: " + jsonEscape(obj[1].post_content) + "<br>" + "BYS Counselor Response: " + jsonEscape(obj[1].comment_content);
+    demo.appendChild(appendage);
+
+    
+}
+ 
+ loadJSONP( 'http://www.askbys.com/askbysmobile/MobileWPSearch.php?search=abuse', 'mycallback' ); //use jsonp callback facility to output json from our jsonp test page
+  </script>
+</body>
+</html>
